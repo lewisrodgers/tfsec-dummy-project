@@ -1,5 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-east1-docker.pkg.dev/$PROJECT_ID/myrepo/tfsec', '--build-arg', 'USERNAME=lewisrodgers', '.']
-# substitutions:
-#   _USERNAME: "lewisrodgers"
+  args: ['build', '-t', 'us-east1-docker.pkg.dev/$PROJECT_ID/myrepo/tfsec', '--build-arg', 'user_name=${_USERNAME}', '.']
+substitutions:
+  _USERNAME: 'lewisrodgers'
